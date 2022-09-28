@@ -31,12 +31,13 @@
   
 
   <div class="container">
-    {{-- <p>{{$cards}}</p> --}}
   
     @foreach($cards as $card)
     <div class="card">
       @if(isset($card['image']))
       <img class="image" src="{{$card['image']}}" alt="card image">
+      @else
+      <img class="image" src="https://placekitten.com/600/400?v=5" alt="card image">
       @endif
       <div class="card-body">
         <p class="title">{{ $card['title'] }}</p>
@@ -54,9 +55,9 @@
         <div class="footer-contact">
         <h2>Let's chat!</h2>
         <h4>
-        <a href="tel:+441373469270">+44 (0)1373 469 270</a>
+        <a class="footer-phone" href="tel:+441373469270">+44 (0)1373 469 270</a>
         </h4>
-        <div>
+        <div class="footer-socials">
         <a href="https://twitter.com/tbt_marketing" class="social-link" target="_blank" rel="noopener"><img src="https://www.tbtmarketing.com/images/twitter.svg" alt="Twitter"></a>
         <a href="https://www.facebook.com/tbtmarketing" class="social-link" target="_blank" rel="noopener"><img src="https://www.tbtmarketing.com/images/facebook.svg" alt="Facebook"></a>
         <a href="https://www.linkedin.com/company/tbt-marketing" class="social-link" target="_blank" rel="noopener"><img src="https://www.tbtmarketing.com/images/linkedin.svg" alt="LinkedIn"></a>
@@ -68,21 +69,9 @@
         <h4>TBT Marketing</h4>
         <p>K1 &amp; K2, The Courtyard<br>Jenson Avenue<br>Commerce Park<br>Frome BA11 2FG, UK<br></p>
         </div>
-        {{-- <div class="content content--right">
-        <p>We're proud holders of:</p>
-        <div class="green-logos">
-        <a href="https://theplanetmark.com/" target="_blank" rel="noopener"><img src="https://www.tbtmarketing.com/images/planet-mark.svg" alt="The Planet Mark"></a>
-        <img src="https://api.thegreenwebfoundation.org/greencheckimage/www.tbtmarketing.com?nocache=true" alt="This website is hosted Green - checked by thegreenwebfoundation.org">
-        </div>
-        </div> --}}
         </div>
     </div>
   </footer>
-  
-  {{-- <script>
-     
-   fetch('/cards').then(response => response.json).catch(err => console.log(err))
-  </script> --}}
   
 </body>
 </html>

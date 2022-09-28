@@ -54,6 +54,7 @@ body {
     width: 100vw;
     padding: 40px 0;
     color: #fff;
+    margin-top: 1rem;
 }
 
 .footer-content {
@@ -69,6 +70,16 @@ body {
 
 .footer-content h2 {
     font-size: 28px;
+}
+
+.footer-phone {
+    text-decoration: none;
+    color: #023047;
+    margin-top: 1rem;
+}
+
+.footer-socials {
+    margin: 1rem 0;
 }
 
 @media (min-width: 786px) {
