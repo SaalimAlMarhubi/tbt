@@ -30,8 +30,8 @@
   </header>
   
 
-  <div class="container">
-  
+  <div class="container" id="app">
+    {{-- <cards-grid></cards-grid> --}}
     @foreach($cards as $card)
     <div class="card">
       @if(isset($card['image']))
