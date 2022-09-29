@@ -1,9 +1,11 @@
 import "./bootstrap";
 import "../css/app.css";
 
-import { createApp } from "vue";
-// import CardsGrid from "./components/CardsGrid";
+import { createApp } from "vue/dist/vue.esm-bundler.js";
+// import CardsGrid from "./components/CardsGrid.vue";
 
-const app = createApp({});
-app.component("cards-grid", CardsGrid);
-app.mount("#app");
+createApp({
+    components: {
+        CardsGrid,
+    },
+}).mount("#app");
