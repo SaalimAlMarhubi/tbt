@@ -16,15 +16,16 @@
             />
             <!-- @endif -->
             <div class="card-body">
-                <p class="title">{{ $card["title"] }}</p>
-                <p class="content">{{ $card["content"] }}</p>
+                <p class="title">{{ $card.title }}</p>
+                <p class="content">{{ card.content }}</p>
                 <!-- @if(isset($card['cta'])) -->
                 <a
+                    v-if="card.cta"
                     target="_blank"
                     class="button"
-                    href="{{$card['cta']['url']}}"
+                    href="{{ card.cta.url }}"
                     rel="noopener noreferrer"
-                    >{{ $card["cta"]["label"] }}
+                    >{{ card.cta.label }}
                 </a>
                 <!-- @endif -->
             </div>
@@ -42,8 +43,8 @@ export default {
     },
     methods: {
         getCards() {
-            axios.get("/api/cards").then((response) => {
-                this.cards = response.data.data;
+            axios.get("/").then((response) => {
+                this.cards = response.data;
             });
         },
     },
